@@ -34,4 +34,11 @@ readdirSync('./Routes')
     .map((r) => app.use('/api', require('./Routes/' + r)))
 
 
+// HTTP GET REQUEST
+app.get("/", (req, res) => {
+    res.status(201).
+    json("Home GET Request");
+  });
+
+
 app.listen(5000, () => console.log('Server is Running 5000'))
